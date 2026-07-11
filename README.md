@@ -11,9 +11,10 @@ pip install -r requirements.txt
 
 ## Getting the dataset
 | Datasets & Materials |                                                 Link                                                 |      
-|:-------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------:|
+|:---------------------------------------------------------------:|:---------------------------------------------------------------:|
 |Train | [Baidu Disk]([wait to upload])
 |Test | [Baidu Disk]([wait to upload])
+
 We use AI_Face (https://github.com/Purdue-M2/AI-Face-FairnessBench) for train and in-domain test, and you can download it from the original project page. After downloading all the necessary files, please put them into the ``dataset`` folder, with the data structure in the ``dataset`` folder as 
 organize the data as below:
 ```
