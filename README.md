@@ -1,4 +1,4 @@
-### Enhancing Generalized Deepfake Detection via Multi-View Adaptive Feature Integration
+# Enhancing Generalized Deepfake Detection via Multi-View Adaptive Feature Integration
 
 <img src="./MVA_VIT.png" width="100%" alt="overall pipeline">
 
