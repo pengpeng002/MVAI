@@ -14,7 +14,7 @@ import pickle
 from datetime import datetime
 from thop import profile
 
-def seed_torch(seed=1029):
+def seed_torch(seed=1025):
     random.seed(seed)
     os.environ['PYTHONHASHSEED'] = str(seed)
     np.random.seed(seed)
@@ -28,8 +28,8 @@ def seed_torch(seed=1029):
 seed_torch(100)
 
 DetectionTests = {
-    'cross_dataset': { 
-        'dataroot': '/path/to/your/dataset',
+    'dataset1': { 
+        'dataroot': './dataset/test',
         'no_resize': False,
         'no_crop': False,
     },
@@ -49,11 +49,13 @@ def save_results_binary(results_dict, filename):
     
     print(f"二进制结果已保存到: {filename}")
 
-def test_model(model_path, batch_size=64, save_file=False):
+def test_model(model_path, batch_size=64, save_file=False, test_path=None):
     opt = TestOptions().parse(print_options=False)
     opt.model_path = model_path
     opt.batch_size = batch_size
     opt.save_file = save_file
+    if test_path is not None:
+        DetectionTests['dataset1']['dataroot'] = test_path
     print(f'Model_path: {opt.model_path}')
     print(f'Batch size: {opt.batch_size}')
 
@@ -103,14 +105,18 @@ def test_model(model_path, batch_size=64, save_file=False):
             opt.no_crop = DetectionTests[testSet]['no_crop']
             
             print(f'Testing on {val}...')
-            res = validate(model, opt)
+            res = validate(model, opt, False)
             test_results['subsets'][val] = res
             acc, ap, f1, roc = res['acc'], res['ap'], res['f1'], res['auc_roc']
             accs.append(acc)
             aps.append(ap)
             f1s.append(f1)
             rocs.append(roc)
-            print(f"({v_id:2d} {val:12}) acc: {acc*100:5.2f}; ap: {ap*100:5.2f} f1: {res['f1']*100:5.2f}; auc_roc: {res['auc_roc']*100:5.2f}")
+            print(
+                f"({v_id:2d} {val:12}) acc: {acc * 100:5.2f}; "
+                f"ap: {ap * 100:5.2f}; f1: {f1 * 100:5.2f}; "
+                f"auc_roc: {roc * 100:5.2f}"
+            )
         
         mean_acc = np.array(accs).mean() * 100
         mean_ap = np.array(aps).mean() * 100
@@ -123,24 +129,28 @@ def test_model(model_path, batch_size=64, save_file=False):
         if opt.save_file:
             os.makedirs(results_dir, exist_ok=True)
             json_filename = os.path.join(results_dir, f"results_{testSet}.json")
-            pickle_filename = os.path.join(results_dir, f"results_{testSet}.pkl")
+            # pickle_filename = os.path.join(results_dir, f"results_{testSet}.pkl")
             save_results_binary(test_results, pickle_filename)
-            save_results_comprehensive(test_results, json_filename)
+            # save_results_comprehensive(test_results, json_filename)
 
         all_results[testSet] = {
             'accuracy': mean_acc,
             'ap': mean_ap,
+            'f1': mean_f1,
+            'auc_roc': mean_roc,
             'individual_accs': accs,
-            'individual_aps': aps
+            'individual_aps': aps,
+            'individual_f1s': f1s,
+            'individual_aucs': rocs,
         }
         print(f'Testing ended at: {time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime())}')
     
-    # 打印总体结果
-    # print("\nOverall Results Summary:")
-    # print('=' * 50)
-    # for testSet, results in all_results.items():
-    #     print(f"{testSet:20} - Acc: {results['accuracy']:5.2f}, AP: {results['ap']:5.2f}")
-    # print('=' * 50)
+    if len(DetectionTests.keys()) > 1:
+        print("\nOverall Results Summary:")
+        print('=' * 50)
+        for testSet, results in all_results.items():
+            print(f"{testSet:20} - Acc: {results['accuracy']:5.2f}, AP: {results['ap']:5.2f}")
+        print('=' * 50)
     
     return all_results
 
@@ -148,10 +158,10 @@ if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser(description='Test ViT model on multiple datasets')
     parser.add_argument('--model_path', type=str, required=True, help='Path to the model checkpoint')
+    parser.add_argument('--test_path', type=str, required=True, help='Path to the test directory that contains dataset subsets')
     parser.add_argument('--batch_size', type=int, default=64, help='Batch size for testing')
     parser.add_argument('--save_file', action='store_true', help='Save test results to file')
-    parser.add_argument('--test_path')
 
     args = parser.parse_args()
     
-    test_model(args.model_path, args.batch_size, args.save_file) 
+    test_model(args.model_path, args.batch_size, args.save_file, args.test_path) 

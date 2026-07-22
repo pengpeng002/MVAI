@@ -30,17 +30,25 @@ def find_best_threshold(y_true, y_pred):
     
     return best_thres
 
-def metrics_calc(y_true, y_pred):
-    r_acc = accuracy_score(y_true[y_true==0], y_pred[y_true==0] > 0.5)
-    f_acc = accuracy_score(y_true[y_true==1], y_pred[y_true==1] > 0.5)
+def metrics_calc(y_true, y_pred, overall=False):
     acc = accuracy_score(y_true, y_pred > 0.5)
     ap = average_precision_score(y_true, y_pred)
-
-    precision = precision_score(y_true, y_pred > 0.5, zero_division=0)
-    recall = recall_score(y_true, y_pred > 0.5, zero_division=0)
     f1 = f1_score(y_true, y_pred > 0.5, zero_division=0)
     auc_roc = roc_auc_score(y_true, y_pred)
-
+    
+    if overall==False:
+        return {
+            'acc': float(acc),
+            'ap': float(ap),
+            'f1': float(f1),
+            'auc_roc': float(auc_roc)
+        }
+        
+    r_acc = accuracy_score(y_true[y_true==0], y_pred[y_true==0] > 0.5)
+    f_acc = accuracy_score(y_true[y_true==1], y_pred[y_true==1] > 0.5)
+    precision = precision_score(y_true, y_pred > 0.5, zero_division=0)
+    recall = recall_score(y_true, y_pred > 0.5, zero_division=0)
+    
     mu_real = y_pred[y_true == 0].mean() if (y_true == 0).any() else 0.0
     mu_fake = y_pred[y_true == 1].mean() if (y_true == 1).any() else 0.0
     std_real = float(y_pred[y_true == 0].std()) if (y_true == 0).any() else np.nan
@@ -102,26 +110,30 @@ def metrics_calc(y_true, y_pred):
 
     }
 
-def validate(model, opt):
+def validate(model, opt, valLoss=True):
     data_loader = create_dataloader(opt)
 
     with autocast(device_type="cuda"):
         with torch.no_grad():
             y_true, y_pred = [], []
-            total_cls_loss = 0.0
-            criterion = torch.nn.BCEWithLogitsLoss()
+            if valLoss:
+                total_cls_loss = 0.0
+                criterion = torch.nn.BCEWithLogitsLoss()
             for i, data in enumerate(data_loader):
                 imgs_batch, labels_batch = data 
                 in_tens = imgs_batch.cuda()
                 labels_tens = labels_batch.cuda().float()
                 output = model(in_tens)
                 pred = output.sigmoid().flatten().tolist()
-                loss = criterion(output.flatten(), labels_tens.flatten())
-                total_cls_loss += loss.item()
+                if valLoss:
+                    loss = criterion(output.flatten(), labels_tens.flatten())
+                    total_cls_loss += loss.item()
                 y_pred.extend(pred)
                 y_true.extend(labels_batch.flatten().tolist())
-    avg_val_loss = total_cls_loss / len(data_loader)        
+         
     y_true, y_pred = np.array(y_true), np.array(y_pred)
     ret = metrics_calc(y_true, y_pred)
-    ret['val_loss']= avg_val_loss
+    if valLoss:
+        avg_val_loss = total_cls_loss / len(data_loader)   
+        ret['val_loss']= avg_val_loss
     return ret
