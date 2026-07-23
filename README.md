@@ -13,8 +13,9 @@ This repository provides:
 - dataset organization instructions for the train, validation, and test sets;
 - released model weights for direct reproduction;
 - scripts that report Accuracy, Average Precision, F1, and ROC-AUC for each test subset.
+- benchmark summaries in `RESULTS.md`.
 
-The fastest way to reproduce the reported results is to download the released test data and checkpoint, then run `run.py`.
+The fastest way to reproduce the reported results is to download the released test data and checkpoint, then run `test.py`.
 
 ## Released Files
 
@@ -34,9 +35,8 @@ MVAF/
 |   `-- test/
 |-- weights/
 |   `-- best.pth
-|-- run.py
-|-- train_vit.py
-`-- test_vit.py
+|-- train.py
+`-- test.py
 ```
 
 ## Environment
@@ -127,7 +127,7 @@ The script evaluates every subset under `./dataset/test`. Each subset must conta
 Example output:
 
 ```text
-Testing on dataset...
+Testing on dataset1...
 ( 0 MMD_GAN     ) acc: xx.xx; ap: xx.xx f1: xx.xx; auc_roc: xx.xx
 ...
 (Mean    ) mAcc: xx.xx, mAP: xx.xx, mF1: xx.xx, mAuc_Roc: xx.xx
@@ -137,7 +137,7 @@ When `--save_file` is enabled, detailed metrics are written to:
 
 ```text
 test_results_<timestamp>/
-|-- results_cross_dataset.json
+`-- results_dataset1.json
 ```
 
 Important arguments:
@@ -147,14 +147,14 @@ Important arguments:
 | `--model_path` | Path to the released or trained checkpoint. |
 | `--test_path` | Path to the directory containing test subsets. |
 | `--batch_size` | Batch size for inference. Reduce this if GPU memory is insufficient. |
-| `--save_file` | Save JSON and PKL result files. |
+| `--save_file` | Save a JSON file containing `acc`, `ap`, `f1`, and `auc_roc` for each subset and the mean result. |
 
 ## Training
 
 To train MVAF from scratch, organize the training and validation data as described above and run:
 
 ```bash
-python train_vit.py \
+python train.py \
   --name mvaf_train \
   --dataroot ./dataset \
   --train_split train \
@@ -171,4 +171,4 @@ Training logs and checkpoints are saved under:
 checkpoints/<experiment_name_with_timestamp>/
 ```
 
-The training script keeps top validation checkpoints after epoch 3 and also uses early stopping. The saved checkpoint can be evaluated with `run.py` or `test_vit.py`.
+The training script keeps top validation checkpoints after epoch 3 and also uses early stopping. The saved checkpoint can be evaluated with `test.py`.
