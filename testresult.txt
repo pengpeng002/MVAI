@@ -1,0 +1,462 @@
+Ours MVAI
+In-domain AI_Face
+( 0 MMD_GAN     ) acc: 99.90; ap: 100.00 f1: 99.90; auc_roc: 100.00
+( 1 MSG_STYLE_GAN) acc: 97.40; ap: 99.65 f1: 97.34; auc_roc: 99.81
+( 2 STARGAN     ) acc: 99.75; ap: 99.94 f1: 99.75; auc_roc: 99.97
+( 3 STGAN       ) acc: 99.40; ap: 99.98 f1: 99.40; auc_roc: 99.99
+( 4 STYLEGAN    ) acc: 96.97; ap: 99.93 f1: 96.88; auc_roc: 99.93
+( 5 VQGAN       ) acc: 99.84; ap: 99.94 f1: 99.84; auc_roc: 99.97
+( 6 dalle2      ) acc: 86.35; ap: 99.76 f1: 84.33; auc_roc: 99.74
+( 7 dcface      ) acc: 99.80; ap: 99.95 f1: 99.80; auc_roc: 99.97
+( 8 if          ) acc: 99.00; ap: 99.96 f1: 99.00; auc_roc: 99.96
+(10 midjourney  ) acc: 88.50; ap: 99.71 f1: 87.01; auc_roc: 99.73
+(11 sdinpaint   ) acc: 99.28; ap: 99.85 f1: 99.27; auc_roc: 99.90
+(12 stylegan3   ) acc: 99.38; ap: 99.91 f1: 99.37; auc_roc: 99.95
+(Mean    ) mAcc: 97.13, mAP: 99.88, mF1: 96.82, mAuc_Roc: 99.91
+
+Cross-dataset Diffusion Face
+( 0 ADM         ) acc: 81.85; ap: 90.91 f1: 84.56; auc_roc: 94.51
+( 1 DDIM        ) acc: 75.80; ap: 85.51 f1: 73.33; auc_roc: 95.71
+( 2 DDPM        ) acc: 82.15; ap: 92.50 f1: 84.85; auc_roc: 95.91
+( 3 DiffSwap    ) acc: 80.35; ap: 88.55 f1: 83.07; auc_roc: 91.79
+( 4 Inpaint     ) acc: 70.05; ap: 69.47 f1: 71.68; auc_roc: 75.85
+( 5 LDM         ) acc: 79.65; ap: 85.60 f1: 82.36; auc_roc: 89.48
+( 6 MM_CelebA   ) acc: 56.35; ap: 52.82 f1: 52.58; auc_roc: 65.15
+( 7 PNDM        ) acc: 82.10; ap: 92.51 f1: 84.80; auc_roc: 95.90
+( 8 SDv15_DS0.3 ) acc: 63.70; ap: 68.01 f1: 63.48; auc_roc: 68.98
+( 9 SDv15_DS0.5 ) acc: 72.40; ap: 76.53 f1: 74.47; auc_roc: 80.12
+(10 SDv15_DS0.7 ) acc: 55.75; ap: 57.34 f1: 51.61; auc_roc: 56.62
+(11 SDv21_DS0.3 ) acc: 58.70; ap: 60.72 f1: 56.25; auc_roc: 62.42
+(12 SDv21_DS0.5 ) acc: 64.25; ap: 66.65 f1: 64.23; auc_roc: 69.63
+(13 SDv21_DS0.7 ) acc: 58.85; ap: 58.80 f1: 56.48; auc_roc: 63.38
+(14 Wild        ) acc: 45.70; ap: 46.78 f1: 33.29; auc_roc: 47.55
+(15 stable_diffusion_v_1_5_text2img_p3g7) acc: 46.95; ap: 47.00 f1: 35.81; auc_roc: 49.31
+(16 stable_diffusion_v_1_5_text2img_p4g5) acc: 50.20; ap: 50.30 f1: 42.03; auc_roc: 53.67
+(17 stable_diffusion_v_1_5_text2img_p5g3) acc: 61.60; ap: 62.37 f1: 60.53; auc_roc: 66.31
+(18 stable_diffusion_v_2_1_text2img_p0g5) acc: 46.85; ap: 46.53 f1: 35.61; auc_roc: 47.71
+(19 stable_diffusion_v_2_1_text2img_p1g7) acc: 43.40; ap: 43.24 f1: 28.45; auc_roc: 42.05
+(20 stable_diffusion_v_2_1_text2img_p2g3) acc: 54.05; ap: 54.43 f1: 48.80; auc_roc: 56.80
+(Mean    ) mAcc: 63.37, mAP: 66.50, mF1: 60.39, mAuc_Roc: 69.95
+Cross-dataset DFFD
+( 0 faceapp     ) acc: 86.78; ap: 88.45 f1: 76.76; auc_roc: 91.33
+( 1 pggan_v1    ) acc: 98.71; ap: 99.77 f1: 98.72; auc_roc: 99.88
+( 2 pggan_v2    ) acc: 98.71; ap: 99.77 f1: 98.72; auc_roc: 99.88
+( 3 stargan     ) acc: 99.25; ap: 99.90 f1: 99.47; auc_roc: 99.88
+( 4 stylegan_celeba) acc: 98.71; ap: 99.76 f1: 98.72; auc_roc: 99.88
+( 5 stylegan_ffhq) acc: 98.07; ap: 99.62 f1: 98.08; auc_roc: 99.75
+(Mean    ) mAcc: 96.70, mAP: 97.88, mF1: 95.08, mAuc_Roc: 98.43
+Cross-dataset DiFF
+( 0 DreamBooth  ) acc: 73.84; ap: 89.50 f1: 65.52; auc_roc: 88.99
+( 1 FreeDoM_I   ) acc: 98.90; ap: 99.57 f1: 98.91; auc_roc: 99.77
+( 2 FreeDoM_T   ) acc: 98.90; ap: 99.57 f1: 98.91; auc_roc: 99.77
+( 3 HPS         ) acc: 80.09; ap: 93.86 f1: 75.76; auc_roc: 94.22
+( 4 LoRA        ) acc: 59.78; ap: 82.20 f1: 34.95; auc_roc: 85.42
+( 5 Midhourney  ) acc: 59.38; ap: 82.30 f1: 33.88; auc_roc: 85.46
+( 6 SDXL        ) acc: 66.38; ap: 88.84 f1: 50.88; auc_roc: 90.85
+( 7 SDXL_Refine ) acc: 59.78; ap: 85.02 f1: 34.95; auc_roc: 88.54
+(Mean    ) mAcc: 74.63, mAP: 90.11, mF1: 61.72, mAuc_Roc: 91.63
+
+F3Net(eccv 2020)
+In-domain AI_Face
+( 0 MMD_GAN     ) acc: 99.80; ap: 100.00 f1: 99.80; auc_roc: 100.00
+( 1 MSG_STYLE_GAN) acc: 99.90; ap: 100.00 f1: 99.90; auc_roc: 100.00
+( 2 STARGAN     ) acc: 86.84; ap: 99.89 f1: 84.86; auc_roc: 99.90
+( 3 STGAN       ) acc: 99.85; ap: 100.00 f1: 99.85; auc_roc: 100.00
+( 4 STYLEGAN    ) acc: 95.19; ap: 99.98 f1: 94.95; auc_roc: 99.98
+( 5 VQGAN       ) acc: 90.88; ap: 99.87 f1: 89.97; auc_roc: 99.86
+( 6 dalle2      ) acc: 67.25; ap: 99.93 f1: 51.82; auc_roc: 99.93
+( 7 dcface      ) acc: 99.83; ap: 100.00 f1: 99.83; auc_roc: 100.00
+( 8 if          ) acc: 95.52; ap: 99.99 f1: 95.34; auc_roc: 99.99
+( 9 midjourney  ) acc: 93.00; ap: 100.00 f1: 92.47; auc_roc: 100.00
+(10 sdinpaint   ) acc: 98.67; ap: 99.92 f1: 98.66; auc_roc: 99.91
+(11 stylegan3   ) acc: 67.09; ap: 99.68 f1: 50.95; auc_roc: 99.68
+(mean                 mAcc: 91.15, mAP: 99.94, mF1: 88.20, mAuc_Roc: 99.94)
+Cross-dataset Diffusion Face
+( 0 ADM         ) acc: 74.05; ap: 75.95 f1: 74.35; auc_roc: 81.00
+( 1 DDIM        ) acc: 41.50; ap: 37.00 f1: 14.72; auc_roc: 25.93
+( 2 DDPM        ) acc: 74.55; ap: 81.12 f1: 74.96; auc_roc: 81.12
+( 3 DiffSwap    ) acc: 59.05; ap: 58.88 f1: 52.47; auc_roc: 63.22
+( 4 Inpaint     ) acc: 49.75; ap: 54.50 f1: 34.61; auc_roc: 57.00
+( 5 LDM         ) acc: 83.30; ap: 89.91 f1: 84.87; auc_roc: 91.48
+( 6 MM_CelebA   ) acc: 36.45; ap: 47.44 f1:  0.00; auc_roc: 55.10
+( 7 PNDM        ) acc: 41.15; ap: 37.19 f1: 13.77; auc_roc: 25.84
+( 8 SDv15_DS0.3 ) acc: 66.20; ap: 70.99 f1: 63.77; auc_roc: 72.22
+( 9 SDv15_DS0.5 ) acc: 68.25; ap: 69.13 f1: 66.70; auc_roc: 74.95
+(10 SDv15_DS0.7 ) acc: 66.70; ap: 70.44 f1: 64.50; auc_roc: 72.63
+(11 SDv21_DS0.3 ) acc: 55.55; ap: 54.50 f1: 46.22; auc_roc: 57.93
+(12 SDv21_DS0.5 ) acc: 61.85; ap: 62.17 f1: 57.11; auc_roc: 67.03
+(13 SDv21_DS0.7 ) acc: 55.50; ap: 55.02 f1: 46.13; auc_roc: 60.77
+(14 Wild        ) acc: 41.20; ap: 38.48 f1: 13.91; auc_roc: 27.14
+(15 stable_diffusion_v_1_5_text2img_p3g7) acc: 53.15; ap: 53.46 f1: 41.62; auc_roc: 54.08
+(16 stable_diffusion_v_1_5_text2img_p4g5) acc: 50.80; ap: 49.48 f1: 36.84; auc_roc: 48.59
+(17 stable_diffusion_v_1_5_text2img_p5g3) acc: 47.50; ap: 45.73 f1: 29.62; auc_roc: 43.12
+(18 stable_diffusion_v_2_1_text2img_p0g5) acc: 39.40; ap: 36.08 f1:  8.87; auc_roc: 24.89
+(19 stable_diffusion_v_2_1_text2img_p1g7) acc: 40.25; ap: 37.29 f1: 11.28; auc_roc: 28.16
+(20 stable_diffusion_v_2_1_text2img_p2g3) acc: 38.35; ap: 34.16 f1:  5.81; auc_roc: 19.38
+(mean                 mAcc: 54.50, mAP: 55.19, mF1: 40.10, mAuc_Roc: 53.88)
+Cross-dataset DFFD
+( 0 faceapp     ) acc: 72.02; ap: 70.01 f1: 29.70; auc_roc: 80.64
+( 1 pggan_v1    ) acc: 99.00; ap: 99.94 f1: 98.99; auc_roc: 99.94
+( 2 pggan_v2    ) acc: 98.98; ap: 99.94 f1: 98.98; auc_roc: 99.94
+( 3 stargan     ) acc: 99.73; ap: 100.00 f1: 99.81; auc_roc: 100.00
+( 4 stylegan_celeba) acc: 98.26; ap: 99.84 f1: 98.25; auc_roc: 99.83
+( 5 stylegan_ffhq) acc: 83.09; ap: 97.70 f1: 79.84; auc_roc: 97.62
+(mean                 mAcc: 91.85, mAP: 94.57, mF1: 84.26, mAuc_Roc: 96.33)
+Cross-dataset DiFF
+( 0 DreamBooth  ) acc: 52.63; ap: 64.69 f1: 11.58; auc_roc: 64.62
+( 1 FreeDoM_I   ) acc: 95.00; ap: 99.51 f1: 94.79; auc_roc: 99.45
+( 2 FreeDoM_T   ) acc: 96.60; ap: 99.60 f1: 96.51; auc_roc: 99.53
+( 3 HPS         ) acc: 58.43; ap: 79.80 f1: 29.99; auc_roc: 78.37
+( 4 LoRA        ) acc: 56.23; ap: 81.03 f1: 23.45; auc_roc: 82.53
+( 5 Midhourney  ) acc: 51.58; ap: 66.15 f1:  7.81; auc_roc: 69.42
+( 6 SDXL        ) acc: 54.78; ap: 75.37 f1: 18.85; auc_roc: 75.93
+( 7 SDXL_Refine ) acc: 53.58; ap: 71.72 f1: 14.86; auc_roc: 72.84
+(mean                 mAcc: 64.85, mAP: 79.73, mF1: 37.23, mAuc_Roc: 80.34)
+
+
+CNNDetection(cvpr 2020)
+In-domain AI_Face
+( 0 MMD_GAN     ) acc: 99.80; ap: 100.00 f1: 99.80; auc_roc: 100.00
+( 1 MSG_STYLE_GAN) acc: 99.90; ap: 100.00 f1: 99.90; auc_roc: 100.00
+( 2 STARGAN     ) acc: 99.50; ap: 99.98 f1: 99.50; auc_roc: 99.98
+( 3 STGAN       ) acc: 99.85; ap: 100.00 f1: 99.85; auc_roc: 100.00
+( 4 STYLEGAN    ) acc: 95.69; ap: 99.90 f1: 95.50; auc_roc: 99.90
+( 5 VQGAN       ) acc: 78.53; ap: 99.23 f1: 72.75; auc_roc: 99.31
+( 6 dalle2      ) acc: 87.34; ap: 99.23 f1: 85.71; auc_roc: 99.03
+( 7 dcface      ) acc: 99.48; ap: 100.00 f1: 99.47; auc_roc: 100.00
+( 8 if          ) acc: 99.00; ap: 99.93 f1: 99.00; auc_roc: 99.90
+( 9 midjourney  ) acc: 98.00; ap: 99.95 f1: 97.98; auc_roc: 99.95
+(10 sdinpaint   ) acc: 99.17; ap: 99.98 f1: 99.17; auc_roc: 99.98
+(11 stylegan3   ) acc: 82.09; ap: 99.23 f1: 78.22; auc_roc: 99.20
+(mean                 mAcc: 94.86, mAP: 99.79, mF1: 93.91, mAuc_Roc: 99.77)
+Cross-dataset Diffusion Face
+( 0 ADM         ) acc: 55.90; ap: 52.76 f1: 51.22; auc_roc: 61.02
+( 1 DDIM        ) acc: 72.13; ap: 52.72 f1: 67.62; auc_roc: 79.64
+( 2 DDPM        ) acc: 73.50; ap: 64.33 f1: 75.46; auc_roc: 76.34
+( 3 DiffSwap    ) acc: 65.35; ap: 64.52 f1: 65.30; auc_roc: 70.35
+( 4 Inpaint     ) acc: 45.05; ap: 48.56 f1: 30.92; auc_roc: 55.25
+( 5 LDM         ) acc: 81.75; ap: 94.39 f1: 84.30; auc_roc: 95.18
+( 6 MM_CelebA   ) acc: 48.35; ap: 51.73 f1: 37.66; auc_roc: 63.02
+( 7 PNDM        ) acc: 74.80; ap: 68.26 f1: 76.94; auc_roc: 78.55
+( 8 SDv15_DS0.3 ) acc: 49.40; ap: 49.38 f1: 39.69; auc_roc: 51.45
+( 9 SDv15_DS0.5 ) acc: 54.00; ap: 53.43 f1: 48.02; auc_roc: 59.18
+(10 SDv15_DS0.7 ) acc: 64.90; ap: 65.19 f1: 64.69; auc_roc: 70.55
+(11 SDv21_DS0.3 ) acc: 51.80; ap: 51.92 f1: 44.15; auc_roc: 53.06
+(12 SDv21_DS0.5 ) acc: 56.20; ap: 55.57 f1: 51.71; auc_roc: 59.46
+(13 SDv21_DS0.7 ) acc: 56.65; ap: 54.60 f1: 52.44; auc_roc: 61.32
+(14 Wild        ) acc: 35.40; ap: 34.44 f1:  7.58; auc_roc: 20.62
+(15 stable_diffusion_v_1_5_text2img_p3g7) acc: 40.00; ap: 41.37 f1: 19.46; auc_roc: 40.49
+(16 stable_diffusion_v_1_5_text2img_p4g5) acc: 38.65; ap: 39.91 f1: 16.13; auc_roc: 37.06
+(17 stable_diffusion_v_1_5_text2img_p5g3) acc: 37.05; ap: 38.01 f1: 12.02; auc_roc: 31.93
+(18 stable_diffusion_v_2_1_text2img_p0g5) acc: 38.20; ap: 38.41 f1: 14.99; auc_roc: 32.85
+(19 stable_diffusion_v_2_1_text2img_p1g7) acc: 38.70; ap: 39.10 f1: 16.26; auc_roc: 34.72
+(20 stable_diffusion_v_2_1_text2img_p2g3) acc: 37.20; ap: 37.82 f1: 12.41; auc_roc: 31.31
+(mean                 mAcc: 53.09, mAP: 52.21, mF1: 42.33, mAuc_Roc: 55.40)
+Cross-dataset DFFD
+( 0 faceapp     ) acc: 71.39; ap: 58.91 f1: 52.27; auc_roc: 72.35
+( 1 pggan_v1    ) acc: 91.68; ap: 97.91 f1: 92.29; auc_roc: 98.40
+( 2 pggan_v2    ) acc: 91.70; ap: 98.32 f1: 92.32; auc_roc: 98.70
+( 3 stargan     ) acc: 95.23; ap: 99.98 f1: 96.74; auc_roc: 99.97
+( 4 stylegan_celeba) acc: 91.34; ap: 97.44 f1: 91.97; auc_roc: 97.95
+( 5 stylegan_ffhq) acc: 84.60; ap: 90.69 f1: 84.75; auc_roc: 92.20
+(mean                 mAcc: 87.66, mAP: 90.54, mF1: 85.06, mAuc_Roc: 93.26)
+Cross-dataset DiFF
+( 0 DreamBooth  ) acc: 47.62; ap: 46.83 f1: 17.23; auc_roc: 45.14
+( 1 FreeDoM_I   ) acc: 80.64; ap: 84.19 f1: 79.90; auc_roc: 88.90
+( 2 FreeDoM_T   ) acc: 73.44; ap: 77.86 f1: 70.19; auc_roc: 85.51
+( 3 HPS         ) acc: 54.23; ap: 60.63 f1: 34.50; auc_roc: 61.01
+( 4 LoRA        ) acc: 53.23; ap: 56.29 f1: 32.10; auc_roc: 59.63
+( 5 Midhourney  ) acc: 45.07; ap: 40.96 f1:  9.56; auc_roc: 36.65
+( 6 SDXL        ) acc: 49.87; ap: 49.72 f1: 23.51; auc_roc: 48.24
+( 7 SDXL_Refine ) acc: 46.27; ap: 42.42 f1: 13.25; auc_roc: 37.02
+(mean                 mAcc: 56.30, mAP: 57.36, mF1: 35.03, mAuc_Roc: 57.76)
+
+
+D3
+In-domain AI_Face
+( 0 MMD_GAN     ) acc: 99.00; ap: 99.96 f1: 98.99; auc_roc: 99.96
+( 1 MSG_STYLE_GAN) acc: 66.70; ap: 93.81 f1: 50.52; auc_roc: 93.73
+( 2 STARGAN     ) acc: 99.78; ap: 99.97 f1: 99.78; auc_roc: 99.98
+( 3 STGAN       ) acc: 94.05; ap: 99.51 f1: 93.69; auc_roc: 99.44
+( 4 STYLEGAN    ) acc: 98.19; ap: 99.98 f1: 98.16; auc_roc: 99.98
+( 5 VQGAN       ) acc: 98.25; ap: 99.98 f1: 98.22; auc_roc: 99.99
+( 6 dalle2      ) acc: 82.25; ap: 99.92 f1: 78.42; auc_roc: 99.92
+( 7 dcface      ) acc: 95.00; ap: 99.72 f1: 94.78; auc_roc: 99.72
+( 8 if          ) acc: 78.60; ap: 99.62 f1: 72.84; auc_roc: 99.70
+( 9 midjourney  ) acc: 62.00; ap: 99.79 f1: 38.71; auc_roc: 99.79
+(10 sdinpaint   ) acc: 97.00; ap: 99.67 f1: 96.93; auc_roc: 99.59
+(11 stylegan3   ) acc: 98.28; ap: 99.99 f1: 98.25; auc_roc: 99.99
+(mean                 mAcc: 89.09, mAP: 99.33, mF1: 84.94, mAuc_Roc: 99.31)
+Cross-dataset Diffusion Face
+( 0 ADM         ) acc: 87.15; ap: 96.13 f1: 88.18; auc_roc: 96.19
+( 1 DDIM        ) acc: 85.00; ap: 92.98 f1: 85.93; auc_roc: 93.23
+( 2 DDPM        ) acc: 78.80; ap: 85.77 f1: 79.05; auc_roc: 87.44
+( 3 DiffSwap    ) acc: 80.35; ap: 89.28 f1: 80.91; auc_roc: 89.15
+( 4 Inpaint     ) acc: 52.10; ap: 60.17 f1: 35.44; auc_roc: 64.96
+( 5 LDM         ) acc: 83.10; ap: 90.91 f1: 83.89; auc_roc: 91.47
+( 6 MM_CelebA   ) acc: 40.60; ap: 54.10 f1:  6.46; auc_roc: 66.49
+( 7 PNDM        ) acc: 85.20; ap: 93.54 f1: 86.16; auc_roc: 93.86
+( 8 SDv15_DS0.3 ) acc: 64.45; ap: 71.75 f1: 59.11; auc_roc: 70.72
+( 9 SDv15_DS0.5 ) acc: 65.75; ap: 70.78 f1: 61.19; auc_roc: 73.50
+(10 SDv15_DS0.7 ) acc: 53.20; ap: 56.05 f1: 37.77; auc_roc: 54.40
+(11 SDv21_DS0.3 ) acc: 54.05; ap: 56.04 f1: 39.42; auc_roc: 55.69
+(12 SDv21_DS0.5 ) acc: 58.40; ap: 61.86 f1: 47.87; auc_roc: 63.08
+(13 SDv21_DS0.7 ) acc: 58.85; ap: 61.32 f1: 48.91; auc_roc: 66.07
+(14 Wild        ) acc: 47.95; ap: 46.86 f1: 24.95; auc_roc: 46.20
+(15 stable_diffusion_v_1_5_text2img_p3g7) acc: 60.35; ap: 61.90 f1: 51.91; auc_roc: 69.37
+(16 stable_diffusion_v_1_5_text2img_p4g5) acc: 64.35; ap: 68.10 f1: 58.86; auc_roc: 74.07
+(17 stable_diffusion_v_1_5_text2img_p5g3) acc: 71.15; ap: 75.66 f1: 68.89; auc_roc: 79.51
+(18 stable_diffusion_v_2_1_text2img_p0g5) acc: 53.95; ap: 55.58 f1: 38.64; auc_roc: 59.97
+(19 stable_diffusion_v_2_1_text2img_p1g7) acc: 49.45; ap: 51.78 f1: 29.74; auc_roc: 56.74
+(20 stable_diffusion_v_2_1_text2img_p2g3) acc: 59.65; ap: 63.37 f1: 50.64; auc_roc: 67.61
+(mean                 mAcc: 64.47, mAP: 69.71, mF1: 55.43, mAuc_Roc: 72.37)
+Cross-dataset DFFD
+( 0 faceapp     ) acc: 74.87; ap: 87.87 f1: 68.11; auc_roc: 85.31
+( 1 pggan_v1    ) acc: 98.10; ap: 100.00 f1: 98.14; auc_roc: 100.00
+( 2 pggan_v2    ) acc: 98.06; ap: 100.00 f1: 98.10; auc_roc: 100.00
+( 3 stargan     ) acc: 98.16; ap: 100.00 f1: 98.19; auc_roc: 100.00
+( 4 stylegan_celeba) acc: 97.92; ap: 99.94 f1: 97.96; auc_roc: 99.94
+( 5 stylegan_ffhq) acc: 97.19; ap: 99.65 f1: 97.22; auc_roc: 99.64
+(mean                 mAcc: 94.05, mAP: 97.91, mF1: 92.95, mAuc_Roc: 97.48)
+Cross-dataset DiFF
+( 0 DreamBooth  ) acc: 65.57; ap: 81.72 f1: 50.65; auc_roc: 80.61
+( 1 FreeDoM_I   ) acc: 88.89; ap: 96.88 f1: 88.00; auc_roc: 96.76
+( 2 FreeDoM_T   ) acc: 93.09; ap: 98.36 f1: 92.91; auc_roc: 98.25
+( 3 HPS         ) acc: 71.27; ap: 87.03 f1: 62.24; auc_roc: 86.35
+( 4 LoRA        ) acc: 52.90; ap: 62.61 f1: 18.25; auc_roc: 64.56
+( 5 Midhourney  ) acc: 52.95; ap: 62.63 f1: 18.12; auc_roc: 64.37
+( 6 SDXL        ) acc: 55.41; ap: 68.70 f1: 25.94; auc_roc: 70.25
+( 7 SDXL_Refine ) acc: 51.75; ap: 58.14 f1: 14.08; auc_roc: 60.78
+(mean                 mAcc: 66.48, mAP: 77.01, mF1: 46.27, mAuc_Roc: 77.74)
+
+
+FIRE
+In-domain AI_Face
+( 0 MMD_GAN     ) acc: 98.50; ap: 99.96 f1: 98.52; auc_roc: 99.96
+( 1 MSG_STYLE_GAN) acc: 98.55; ap: 100.00 f1: 98.57; auc_roc: 100.00
+( 2 STARGAN     ) acc: 97.12; ap: 99.97 f1: 97.04; auc_roc: 99.97
+( 3 STGAN       ) acc: 98.10; ap: 99.92 f1: 98.14; auc_roc: 99.92
+( 4 STYLEGAN    ) acc: 61.47; ap: 98.27 f1: 37.38; auc_roc: 98.46
+( 5 VQGAN       ) acc: 96.69; ap: 99.93 f1: 96.57; auc_roc: 99.93
+( 6 dalle2      ) acc: 63.03; ap: 97.02 f1: 42.02; auc_roc: 96.42
+( 7 dcface      ) acc: 96.97; ap: 99.68 f1: 96.97; auc_roc: 99.69
+( 8 if          ) acc: 100.00; ap: 100.00 f1: 100.00; auc_roc: 100.00
+( 9 midjourney  ) acc: 87.50; ap: 99.94 f1: 85.71; auc_roc: 99.94
+(10 sdinpaint   ) acc: 96.08; ap: 99.28 f1: 96.05; auc_roc: 99.18
+(11 stylegan3   ) acc: 68.22; ap: 98.12 f1: 53.41; auc_roc: 97.97
+(mean                 mAcc: 88.52, mAP: 99.34, mF1: 83.37, mAuc_Roc: 99.29)
+Cross-dataset Diffusion Face
+( 0 ADM         ) acc: 45.85; ap: 43.08 f1: 59.18; auc_roc: 41.75
+( 1 DDIM        ) acc: 40.33; ap: 33.60 f1: 50.47; auc_roc: 53.84
+( 2 DDPM        ) acc: 55.10; ap: 63.26 f1: 68.31; auc_roc: 68.59
+( 3 DiffSwap    ) acc: 47.10; ap: 45.69 f1: 60.43; auc_roc: 44.62
+( 4 Inpaint     ) acc: 35.50; ap: 37.55 f1: 47.13; auc_roc: 27.63
+( 5 LDM         ) acc: 55.10; ap: 79.09 f1: 68.31; auc_roc: 78.25
+( 6 MM_CelebA   ) acc: 50.45; ap: 41.47 f1: 63.77; auc_roc: 40.63
+( 7 PNDM        ) acc: 50.65; ap: 47.80 f1: 64.02; auc_roc: 49.72
+( 8 SDv15_DS0.3 ) acc: 45.30; ap: 43.51 f1: 58.50; auc_roc: 41.01
+( 9 SDv15_DS0.5 ) acc: 50.15; ap: 49.43 f1: 63.55; auc_roc: 50.69
+(10 SDv15_DS0.7 ) acc: 51.60; ap: 51.71 f1: 64.93; auc_roc: 53.87
+(11 SDv21_DS0.3 ) acc: 49.40; ap: 48.42 f1: 62.82; auc_roc: 49.27
+(12 SDv21_DS0.5 ) acc: 49.75; ap: 48.49 f1: 63.23; auc_roc: 49.24
+(13 SDv21_DS0.7 ) acc: 47.15; ap: 46.10 f1: 60.49; auc_roc: 44.97
+(14 Wild        ) acc: 15.40; ap: 31.68 f1: 17.06; auc_roc:  7.87
+(15 stable_diffusion_v_1_5_text2img_p3g7) acc: 27.90; ap: 33.60 f1: 37.03; auc_roc: 17.55
+(16 stable_diffusion_v_1_5_text2img_p4g5) acc: 26.70; ap: 33.56 f1: 35.25; auc_roc: 17.40
+(17 stable_diffusion_v_1_5_text2img_p5g3) acc: 29.05; ap: 34.20 f1: 38.76; auc_roc: 19.55
+(18 stable_diffusion_v_2_1_text2img_p0g5) acc: 29.60; ap: 33.96 f1: 39.47; auc_roc: 18.94
+(19 stable_diffusion_v_2_1_text2img_p1g7) acc: 30.55; ap: 34.08 f1: 40.82; auc_roc: 19.37
+(20 stable_diffusion_v_2_1_text2img_p2g3) acc: 32.25; ap: 35.20 f1: 43.04; auc_roc: 22.80
+(mean                 mAcc: 41.18, mAP: 43.59, mF1: 52.69, mAuc_Roc: 38.93)
+Cross-dataset DFFD
+( 0 faceapp     ) acc: 58.77; ap: 51.53 f1: 55.06; auc_roc: 69.18
+( 1 pggan_v1    ) acc: 69.57; ap: 80.23 f1: 74.47; auc_roc: 81.06
+( 2 pggan_v2    ) acc: 71.27; ap: 84.96 f1: 76.24; auc_roc: 84.94
+( 3 stargan     ) acc: 84.68; ap: 97.71 f1: 90.14; auc_roc: 94.81
+( 4 stylegan_celeba) acc: 70.92; ap: 82.81 f1: 75.90; auc_roc: 83.71
+( 5 stylegan_ffhq) acc: 55.43; ap: 56.34 f1: 57.63; auc_roc: 58.27
+(mean                 mAcc: 68.44, mAP: 75.60, mF1: 71.57, mAuc_Roc: 78.66)
+Cross-dataset DiFF
+( 0 DreamBooth  ) acc: 44.02; ap: 43.92 f1: 40.00; auc_roc: 41.35
+( 1 FreeDoM_I   ) acc: 74.44; ap: 95.64 f1: 79.34; auc_roc: 95.19
+( 2 FreeDoM_T   ) acc: 73.09; ap: 93.41 f1: 77.93; auc_roc: 92.07
+( 3 HPS         ) acc: 48.37; ap: 47.66 f1: 47.02; auc_roc: 46.10
+( 4 LoRA        ) acc: 52.33; ap: 50.84 f1: 53.03; auc_roc: 52.25
+( 5 Midhourney  ) acc: 39.77; ap: 40.02 f1: 32.21; auc_roc: 34.43
+( 6 SDXL        ) acc: 47.32; ap: 46.47 f1: 45.30; auc_roc: 45.21
+( 7 SDXL_Refine ) acc: 46.57; ap: 45.42 f1: 44.20; auc_roc: 44.30
+(mean                 mAcc: 53.24, mAP: 57.92, mF1: 52.38, mAuc_Roc: 56.36)
+
+
+FreqNet
+In-domain AI_Face
+( 0 MMD_GAN     ) acc: 94.40; ap: 99.95 f1: 94.69; auc_roc: 99.94
+( 1 MSG_STYLE_GAN) acc: 93.75; ap: 99.99 f1: 94.12; auc_roc: 99.99
+( 2 STARGAN     ) acc: 82.38; ap: 97.12 f1: 79.02; auc_roc: 97.25
+( 3 STGAN       ) acc: 94.90; ap: 99.90 f1: 95.15; auc_roc: 99.95
+( 4 STYLEGAN    ) acc: 65.31; ap: 89.13 f1: 48.42; auc_roc: 89.60
+( 5 VQGAN       ) acc: 98.75; ap: 99.93 f1: 98.75; auc_roc: 99.93
+( 6 dalle2      ) acc: 57.07; ap: 80.33 f1: 28.22; auc_roc: 80.55
+( 7 dcface      ) acc: 94.00; ap: 99.73 f1: 94.32; auc_roc: 99.74
+( 8 if          ) acc: 97.81; ap: 99.64 f1: 97.81; auc_roc: 99.50
+( 9 midjourney  ) acc: 92.00; ap: 99.18 f1: 91.49; auc_roc: 99.25
+(10 sdinpaint   ) acc: 93.97; ap: 99.73 f1: 94.29; auc_roc: 99.68
+(11 stylegan3   ) acc: 66.19; ap: 89.68 f1: 49.81; auc_roc: 88.62
+(mean                 mAcc: 85.88, mAP: 96.19, mF1: 80.51, mAuc_Roc: 96.17)
+Cross-dataset Diffusion Face
+( 0 ADM         ) acc: 60.50; ap: 80.34 f1: 71.02; auc_roc: 80.38
+( 1 DDIM        ) acc: 21.20; ap: 21.75 f1:  9.98; auc_roc: 11.53
+( 2 DDPM        ) acc: 56.45; ap: 75.75 f1: 67.07; auc_roc: 72.53
+( 3 DiffSwap    ) acc: 42.30; ap: 45.36 f1: 51.14; auc_roc: 39.90
+( 4 Inpaint     ) acc: 37.25; ap: 49.65 f1: 44.49; auc_roc: 38.41
+( 5 LDM         ) acc: 58.55; ap: 86.87 f1: 69.15; auc_roc: 83.62
+( 6 MM_CelebA   ) acc: 53.85; ap: 51.10 f1: 64.40; auc_roc: 54.62
+( 7 PNDM        ) acc: 19.15; ap: 35.17 f1: 14.85; auc_roc: 12.15
+( 8 SDv15_DS0.3 ) acc: 34.15; ap: 38.46 f1: 40.11; auc_roc: 29.31
+( 9 SDv15_DS0.5 ) acc: 59.35; ap: 74.96 f1: 69.92; auc_roc: 75.29
+(10 SDv15_DS0.7 ) acc: 37.90; ap: 41.31 f1: 45.38; auc_roc: 34.16
+(11 SDv21_DS0.3 ) acc: 51.05; ap: 50.53 f1: 61.41; auc_roc: 51.14
+(12 SDv21_DS0.5 ) acc: 54.30; ap: 54.40 f1: 64.87; auc_roc: 56.67
+(13 SDv21_DS0.7 ) acc: 51.70; ap: 51.19 f1: 62.12; auc_roc: 52.74
+(14 Wild        ) acc: 45.60; ap: 56.75 f1: 55.19; auc_roc: 50.06
+(15 stable_diffusion_v_1_5_text2img_p3g7) acc: 33.50; ap: 37.73 f1: 39.16; auc_roc: 28.43
+(16 stable_diffusion_v_1_5_text2img_p4g5) acc: 34.10; ap: 38.21 f1: 40.04; auc_roc: 29.17
+(17 stable_diffusion_v_1_5_text2img_p5g3) acc: 34.40; ap: 38.73 f1: 40.47; auc_roc: 30.00
+(18 stable_diffusion_v_2_1_text2img_p0g5) acc: 30.70; ap: 39.27 f1: 34.93; auc_roc: 26.51
+(19 stable_diffusion_v_2_1_text2img_p1g7) acc: 25.45; ap: 36.70 f1: 26.37; auc_roc: 20.36
+(20 stable_diffusion_v_2_1_text2img_p2g3) acc: 38.20; ap: 44.15 f1: 45.79; auc_roc: 36.08
+(mean                 mAcc: 41.89, mAP: 49.92, mF1: 48.47, mAuc_Roc: 43.48)
+Cross-dataset DFFD
+( 0 faceapp     ) acc: 79.88; ap: 81.62 f1: 75.38; auc_roc: 91.07
+( 1 pggan_v1    ) acc: 86.54; ap: 99.34 f1: 88.07; auc_roc: 99.28
+( 2 pggan_v2    ) acc: 86.58; ap: 99.30 f1: 88.11; auc_roc: 99.23
+( 3 stargan     ) acc: 92.32; ap: 99.99 f1: 94.86; auc_roc: 99.97
+( 4 stylegan_celeba) acc: 80.12; ap: 91.98 f1: 81.33; auc_roc: 90.56
+( 5 stylegan_ffhq) acc: 53.17; ap: 53.77 f1: 41.11; auc_roc: 58.96
+(mean                 mAcc: 79.77, mAP: 87.67, mF1: 78.14, mAuc_Roc: 89.84)
+Cross-dataset DiFF
+( 0 DreamBooth  ) acc: 74.04; ap: 80.73 f1: 74.42; auc_roc: 80.99
+( 1 FreeDoM_I   ) acc: 81.84; ap: 91.85 f1: 83.39; auc_roc: 91.68
+( 2 FreeDoM_T   ) acc: 83.84; ap: 94.97 f1: 85.48; auc_roc: 94.65
+( 3 HPS         ) acc: 67.58; ap: 73.82 f1: 65.89; auc_roc: 75.87
+( 4 LoRA        ) acc: 66.48; ap: 70.45 f1: 64.32; auc_roc: 73.09
+( 5 Midhourney  ) acc: 56.98; ap: 62.22 f1: 49.05; auc_roc: 61.31
+( 6 SDXL        ) acc: 70.99; ap: 79.91 f1: 70.53; auc_roc: 77.55
+( 7 SDXL_Refine ) acc: 68.28; ap: 77.88 f1: 66.88; auc_roc: 74.55
+(mean                 mAcc: 71.25, mAP: 78.98, mF1: 70.00, mAuc_Roc: 78.71)
+
+
+Ojha
+In-domain AI_Face
+( 0 dalle2      ) acc: 96.50; ap: 99.40 f1: 96.45; auc_roc: 99.40
+( 1 midjourney  ) acc: 99.00; ap: 100.00 f1: 99.01; auc_roc: 100.00
+( 2 if          ) acc: 98.50; ap: 99.98 f1: 98.52; auc_roc: 99.98
+( 3 dcface      ) acc: 39.90; ap: 39.97 f1: 54.33; auc_roc: 28.36
+( 4 STARGAN     ) acc: 98.05; ap: 99.99 f1: 98.09; auc_roc: 99.99
+( 5 STGAN       ) acc: 48.10; ap: 57.17 f1: 63.81; auc_roc: 51.85
+( 6 sdinpaint   ) acc: 50.50; ap: 72.94 f1: 65.74; auc_roc: 67.81
+( 7 STYLEGAN    ) acc: 99.00; ap: 99.99 f1: 99.01; auc_roc: 99.99
+( 8 MMD_GAN     ) acc: 52.95; ap: 94.04 f1: 67.96; auc_roc: 93.54
+( 9 VQGAN       ) acc: 93.05; ap: 98.68 f1: 92.79; auc_roc: 98.76
+(10 stylegan3   ) acc: 98.15; ap: 99.86 f1: 98.17; auc_roc: 99.86
+(11 MSG_STYLE_GAN) acc: 52.95; ap: 76.24 f1: 67.96; auc_roc: 78.69
+(mean                 mAcc: 77.22, mAP: 86.52, mF1: 83.49, mAuc_Roc: 84.85)
+Cross-dataset Diffusion Face
+( 0 LDM         ) acc: 65.00; ap: 85.00 f1: 73.70; auc_roc: 84.99
+( 1 DDPM        ) acc: 61.85; ap: 74.90 f1: 70.64; auc_roc: 73.82
+( 2 stable_diffusion_v_2_1_text2img_p2g3) acc: 60.90; ap: 71.16 f1: 69.69; auc_roc: 71.08
+( 3 MM_CelebA   ) acc: 65.95; ap: 71.81 f1: 74.60; auc_roc: 81.86
+( 4 SDv21_DS0.5 ) acc: 57.10; ap: 57.11 f1: 65.73; auc_roc: 61.17
+( 5 DiffSwap    ) acc: 65.40; ap: 97.34 f1: 74.08; auc_roc: 96.75
+( 6 DDIM        ) acc: 66.30; ap: 90.26 f1: 74.64; auc_roc: 89.97
+( 7 SDv21_DS0.7 ) acc: 59.75; ap: 56.19 f1: 68.52; auc_roc: 62.13
+( 8 stable_diffusion_v_1_5_text2img_p4g5) acc: 62.40; ap: 71.82 f1: 71.19; auc_roc: 72.52
+( 9 Wild        ) acc: 47.90; ap: 47.79 f1: 55.09; auc_roc: 46.83
+(10 Inpaint     ) acc: 61.50; ap: 75.51 f1: 70.29; auc_roc: 76.85
+(11 stable_diffusion_v_2_1_text2img_p1g7) acc: 59.45; ap: 57.96 f1: 68.21; auc_roc: 62.25
+(12 SDv21_DS0.3 ) acc: 52.30; ap: 52.98 f1: 60.38; auc_roc: 53.23
+(13 PNDM        ) acc: 65.50; ap: 90.77 f1: 74.18; auc_roc: 90.32
+(14 stable_diffusion_v_1_5_text2img_p3g7) acc: 61.75; ap: 66.55 f1: 70.54; auc_roc: 68.83
+(15 ADM         ) acc: 65.15; ap: 92.65 f1: 73.85; auc_roc: 91.67
+(16 stable_diffusion_v_1_5_text2img_p5g3) acc: 63.90; ap: 81.33 f1: 72.65; auc_roc: 80.60
+(17 stable_diffusion_v_2_1_text2img_p0g5) acc: 58.60; ap: 60.86 f1: 67.32; auc_roc: 63.28
+(18 SDv15_DS0.5 ) acc: 54.60; ap: 52.39 f1: 63.00; auc_roc: 54.36
+(19 SDv15_DS0.3 ) acc: 50.70; ap: 58.32 f1: 58.50; auc_roc: 54.85
+(20 SDv15_DS0.7 ) acc: 47.75; ap: 46.92 f1: 54.90; auc_roc: 45.23
+(mean                 mAcc: 59.70, mAP: 69.51, mF1: 68.18, mAuc_Roc: 70.60)
+Cross-dataset DFFD
+( 0 stylegan_ffhq) acc: 67.35; ap: 95.36 f1: 75.27; auc_roc: 94.68
+( 1 faceapp     ) acc: 61.95; ap: 84.75 f1: 69.96; auc_roc: 80.23
+( 2 pggan_v2    ) acc: 67.60; ap: 99.14 f1: 75.51; auc_roc: 98.98
+( 3 pggan_v1    ) acc: 67.65; ap: 99.33 f1: 75.56; auc_roc: 99.25
+( 4 stargan     ) acc: 67.60; ap: 98.93 f1: 75.51; auc_roc: 98.74
+( 5 stylegan_celeba) acc: 67.45; ap: 96.20 f1: 75.37; auc_roc: 95.70
+(mean                 mAcc: 66.60, mAP: 95.62, mF1: 74.53, mAuc_Roc: 94.60)
+Cross-dataset DiFF
+( 0 LoRA        ) acc: 66.50; ap: 87.81 f1: 74.33; auc_roc: 89.37
+( 1 FreeDoM_T   ) acc: 67.00; ap: 90.82 f1: 74.81; auc_roc: 91.61
+( 2 FreeDoM_I   ) acc: 63.50; ap: 78.41 f1: 71.37; auc_roc: 77.99
+( 3 SDXL_Refine ) acc: 59.00; ap: 76.41 f1: 66.67; auc_roc: 76.13
+( 4 HPS         ) acc: 67.00; ap: 89.09 f1: 74.81; auc_roc: 89.60
+( 5 DreamBooth  ) acc: 66.50; ap: 82.25 f1: 74.33; auc_roc: 83.95
+( 6 SDXL        ) acc: 66.50; ap: 89.25 f1: 74.33; auc_roc: 91.40
+( 7 Midhourney  ) acc: 66.50; ap: 86.67 f1: 74.33; auc_roc: 87.86
+(mean                 mAcc: 65.31, mAP: 85.09, mF1: 73.12, mAuc_Roc: 85.99)
+
+
+GAPL
+In-domain AI_Face
+( 0 MMD_GAN) acc: 100.00; ap: 100.00 f1: 100.00; auc_roc: 100.00
+( 1 MSG_STYLE_GAN) acc: 100.00; ap: 100.00 f1: 100.00; auc_roc: 100.00
+( 2 STARGAN) acc: 100.00; ap: 100.00 f1: 100.00; auc_roc: 100.00
+( 3 STGAN) acc: 100.00; ap: 100.00 f1: 100.00; auc_roc: 100.00
+( 4 STYLEGAN) acc: 62.60; ap: 99.79 f1: 40.26; auc_roc: 99.82
+( 5 VQGAN) acc: 100.00; ap: 100.00 f1: 100.00; auc_roc: 100.00
+( 6 dalle2) acc: 96.00; ap: 100.00 f1: 95.83; auc_roc: 100.00
+( 7 dcface) acc: 99.90; ap: 100.00 f1: 99.90; auc_roc: 100.00
+( 8 if) acc: 100.00; ap: 100.00 f1: 100.00; auc_roc: 100.00
+( 9 midjourney) acc: 100.00; ap: 100.00 f1: 100.00; auc_roc: 100.00
+(10 sdinpaint) acc: 100.00; ap: 100.00 f1: 100.00; auc_roc: 100.00
+(11 stylegan3) acc: 99.95; ap: 100.00 f1: 99.95; auc_roc: 100.00
+(mean                 mAcc: 96.54, mAP: 99.98, mF1: 94.66, mAuc_Roc: 99.98)
+Cross-dataset Diffusion Face
+( 0 ADM         ) acc: 50.85; ap: 89.97 f1: 67.05; auc_roc: 92.52
+( 1 DDIM        ) acc: 50.70; ap: 40.34 f1: 66.87; auc_roc: 36.88
+( 2 DDPM        ) acc: 50.85; ap: 41.76 f1: 67.05; auc_roc: 40.86
+( 3 DiffSwap    ) acc: 50.85; ap: 78.20 f1: 67.05; auc_roc: 83.15
+( 4 Inpaint     ) acc: 26.65; ap: 41.41 f1: 41.30; auc_roc: 31.43
+( 5 LDM         ) acc: 50.85; ap: 79.88 f1: 67.05; auc_roc: 85.35
+( 6 MM_CelebA   ) acc:  2.05; ap: 32.44 f1:  2.39; auc_roc:  0.95
+( 7 PNDM        ) acc: 50.75; ap: 41.12 f1: 66.96; auc_roc: 37.88
+( 8 SDv15_DS0.3 ) acc: 50.20; ap: 50.20 f1: 66.46; auc_roc: 50.61
+( 9 SDv15_DS0.5 ) acc: 50.85; ap: 59.84 f1: 67.05; auc_roc: 65.42
+(10 SDv15_DS0.7 ) acc: 50.25; ap: 60.02 f1: 66.51; auc_roc: 60.76
+(11 SDv21_DS0.3 ) acc: 50.15; ap: 43.32 f1: 66.42; auc_roc: 41.79
+(12 SDv21_DS0.5 ) acc: 50.70; ap: 45.47 f1: 66.91; auc_roc: 46.73
+(13 SDv21_DS0.7 ) acc: 50.70; ap: 45.68 f1: 66.91; auc_roc: 46.39
+(14 Wild        ) acc: 48.35; ap: 37.44 f1: 64.78; auc_roc: 29.11
+(15 stable_diffusion_v_1_5_text2img_p3g7) acc: 50.25; ap: 43.84 f1: 66.51; auc_roc: 44.64
+(16 stable_diffusion_v_1_5_text2img_p4g5) acc: 49.30; ap: 42.27 f1: 65.65; auc_roc: 40.94
+(17 stable_diffusion_v_1_5_text2img_p5g3) acc: 47.95; ap: 39.64 f1: 64.41; auc_roc: 35.05
+(18 stable_diffusion_v_2_1_text2img_p0g5) acc: 47.20; ap: 41.35 f1: 63.71; auc_roc: 35.81
+(19 stable_diffusion_v_2_1_text2img_p1g7) acc: 48.25; ap: 44.85 f1: 64.69; auc_roc: 42.07
+(20 stable_diffusion_v_2_1_text2img_p2g3) acc: 42.80; ap: 36.28 f1: 59.46; auc_roc: 25.14
+(mean                 mAcc: 46.21, mAP: 49.30, mF1: 61.68, mAuc_Roc: 46.36)
+Cross-dataset DFFD
+( 0 faceapp     ) acc: 54.80; ap: 47.60 f1: 67.10; auc_roc: 51.27
+( 1 pggan_v1    ) acc: 58.20; ap: 97.00 f1: 70.52; auc_roc: 97.90
+( 2 pggan_v2    ) acc: 58.05; ap: 94.91 f1: 70.45; auc_roc: 96.67
+( 3 stargan     ) acc: 52.85; ap: 46.27 f1: 66.14; auc_roc: 48.54
+( 4 stylegan_celeba) acc: 58.45; ap: 88.83 f1: 70.65; auc_roc: 92.42
+( 5 stylegan_ffhq) acc: 59.10; ap: 88.88 f1: 70.97; auc_roc: 92.21
+(mean                 mAcc: 56.91, mAP: 77.25, mF1: 69.31, mAuc_Roc: 79.83)
+Cross-dataset DiFF
+( 0 DreamBooth  ) acc: 28.21; ap: 35.95 f1: 35.74; auc_roc: 23.84
+( 1 FreeDoM_I   ) acc: 58.28; ap: 62.64 f1: 70.57; auc_roc: 72.75
+( 2 FreeDoM_T   ) acc: 57.63; ap: 66.94 f1: 69.98; auc_roc: 76.01
+( 3 HPS         ) acc: 54.78; ap: 61.91 f1: 67.29; auc_roc: 61.86
+( 4 LoRA        ) acc: 21.51; ap: 32.98 f1: 25.25; auc_roc: 14.91
+( 5 Midhourney  ) acc: 36.22; ap: 35.97 f1: 46.72; auc_roc: 25.94
+( 6 SDXL        ) acc: 24.21; ap: 33.23 f1: 29.63; auc_roc: 15.98
+( 7 SDXL_Refine ) acc: 18.51; ap: 32.20 f1: 20.11; auc_roc: 11.33
+(mean                 mAcc: 37.42, mAP: 45.23, mF1: 45.66, mAuc_Roc: 37.83)
